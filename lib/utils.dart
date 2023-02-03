@@ -5,6 +5,7 @@ List<int> fibonacci(int maxNumber){
 
 bool isPalindrome(String text){
   return true;
+
 }
 
 List<int> burbleShort(List<int> list){
