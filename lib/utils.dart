@@ -63,7 +63,7 @@ List<int> DoQuickSort(List<int> arr, int begin, int end) {
   }
   return arr;
 }
- List<int> QuickSort(List<int> a) {
+ List<int> quickSort(List<int> a) {
     return DoQuickSort(a, 0, a.length - 1);
 }
 
