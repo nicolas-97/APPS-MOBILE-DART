@@ -54,14 +54,17 @@ List<int> burbleShort(List<int> list){
   return list;
 }
 
-List<int> quickSort(List<int> arr, int begin, int end) {
+List<int> DoQuickSort(List<int> arr, int begin, int end) {
   if (begin < end) {
     int partitionIndex = partition(arr, begin, end);
 
-    quickSort(arr, begin, partitionIndex - 1);
-    quickSort(arr, partitionIndex + 1, end);
+    DoQuickSort(arr, begin, partitionIndex - 1);
+    DoQuickSort(arr, partitionIndex + 1, end);
   }
   return arr;
+}
+ List<int> QuickSort(List<int> a) {
+    return DoQuickSort(a, 0, a.length - 1);
 }
 
 int partition(List<int> arr, int begin, int end) {
