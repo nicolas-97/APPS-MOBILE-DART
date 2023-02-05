@@ -1,5 +1,6 @@
 
 List<int> fibonacci(int serie) {
+  print(serie);
   int a = 0;
   int b = 1;
   int c = 0;
@@ -7,7 +8,7 @@ List<int> fibonacci(int serie) {
   for (int i = 0; i < serie; i++) {
     c = b;
     arr.add(c);
-    //   print(c);
+    print(c);
     b = b + a;
     a = c;
   }
