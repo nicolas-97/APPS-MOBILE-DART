@@ -5,16 +5,13 @@ List<int> fibonacci(int maxNumber){
 
 bool isPalindrome(String text){
   return true;
-
-////
-
 }
 
 List<int> burbleShort(List<int> list){
   
-  int lengthOfArray = list.length; 
-  for (int i = 0; i < lengthOfArray - 1; i++) { 
-    for (int j = 0; j < lengthOfArray - i - 1; j++) { 
+  int largo = list.length; 
+  for (int i = 0; i < largo - 1; i++) { 
+    for (int j = 0; j < largo - i - 1; j++) { 
       if (list[j] > list[j + 1]) { 
   
         int temp = list[j]; 
