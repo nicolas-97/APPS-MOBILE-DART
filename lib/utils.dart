@@ -1,34 +1,35 @@
-
+import 'package:diacritic/diacritic.dart';
 import 'dart:html';
 
 List<int> fibonacci(int maxNumber){
-  var result = [1];
-  var valor1=0,valor2=1,sum1=0,sum2=1;
-  for (int i =0; i < maxNumber; i++ ){
-    sum1 = valor1 + valor2;
-    result.add(sum1);
-    sum2 = sum2 + sum1;
-    valor1 = valor2;
-    valor2 = sum1;
+  var firstList = [1,1];
+  return RecursiveFibonacci(1, 1, maxNumber,firstList);
+}
+
+List<int> RecursiveFibonacci(int numBefore, int numAfter, int numMax, var list){
+  var numTotal = numBefore + numAfter;
+  if ( numTotal >= numMax) {
+    return list;
   }
-  return result;
+  list.add(numTotal);
+  return RecursiveFibonacci(numAfter,numTotal,numMax,list);
 }
 
 bool isPalindrome(String text){
   var text1 = "";
   var text2 = "";
-  var tam = text.trim();
-  print(tam);
-  for (var i = 0; i < tam.length; i++)
+  var tempText = text.toUpperCase();
+  var textSinTildes = removeDiacritics(tempText);
+  for (var i = 0; i < textSinTildes.length; i++)
   {
-    var carac = text.substring(i, i+1);
+    var carac = textSinTildes.substring(i, i+1);
     if (carac != " ") {
       text1 = text1 + carac;
     } 
   }
-  for (var i = tam.length - 1; i >= 0; i--)
+  for (var i = textSinTildes.length - 1; i >= 0; i--)
   {
-    var carac = text.substring(i, i+1);
+    var carac = textSinTildes.substring(i, i+1);
     if (carac != " ") {
       text2 = text2 + carac;
     }
