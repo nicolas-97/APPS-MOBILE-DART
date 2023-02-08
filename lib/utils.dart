@@ -5,7 +5,7 @@ List<int> fibonacci(int maxNumber){
   int count = 0;
   int fibo = 0;
   List<int>  fibonacci=[];
-  while (count <= 6) {
+  while (count <= maxNumber) {
     fibonacci.add(var1);
     fibo = var1 + var2;
     var1 = var2;
