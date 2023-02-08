@@ -1,4 +1,20 @@
 List<int> fibonacci(int maxNumber) {
+  List<int> resp = [1, 1];
+
+  return fibonacciRecursivo(1, 1, maxNumber, resp);
+}
+
+List<int> fibonacciRecursivo(
+    int beforeValue, int afterValue, int maxValue, List<int> list) {
+  if (beforeValue + afterValue >= maxValue) {
+    return list;
+  }
+  list.add(beforeValue + afterValue);
+  return fibonacciRecursivo(
+      afterValue, beforeValue + afterValue, maxValue, list);
+}
+
+List<int> fibonacci2(int maxNumber) {
   List<int> resp = [];
   int value = 0;
   int num1 = 1;
