@@ -2,16 +2,14 @@
 List<int> fibonacci(int maxNumber){
    int var1 = 1;
   int var2 = 1;
-  int count = 0;
   int fibo = 0;
   List<int>  fibonacci=[];
-  while (count <= maxNumber) {
-    fibonacci.add(var1);
+for (int count = 1; var2 < maxNumber; count ++) {
+
     fibo = var1 + var2;
     var1 = var2;
     var2 = fibo;
-    count += 1;
-
+    fibonacci.add(var1);
   }
 return fibonacci;
 }
@@ -19,8 +17,8 @@ return fibonacci;
 
 
 bool isPalindrome(String text){
-String cadena= "somos o no somos";
-   String cadenatratada=cadena.toLowerCase().replaceAll(' ', '').replaceAll(',', '').replaceAll('.', '');
+String cadenatratada=text.toLowerCase().replaceAll(' ', '').replaceAll(',', '').replaceAll('.', '').replaceAll('á', 'a').replaceAll('é', 'e').replaceAll('í', 'i').replaceAll('ó', 'o').replaceAll('ú', 'u')
+;
     bool estado;
   
    String cadenaInvertida=""; 
@@ -38,18 +36,18 @@ String cadena= "somos o no somos";
 }
 
 List<int> burbleShort(List<int> list){
- var lista=[ 9,6,1,3,8];
-  var longitud = lista.length;
+
+  var longitud = list.length;
   for (var i = 0; i < longitud; i++) { 
     for (var j = 0; j < longitud - i - 1; j++) {
-      if (lista[j] > lista[j + 1]) {
-        var temp = lista[j];
-        lista[j] = lista[j + 1];
-        lista[j + 1] = temp;
+      if (list[j] > list[j + 1]) {
+        var temp = list[j];
+        list[j] = list[j + 1];
+        list[j + 1] = temp;
       }
     }
   }
-return lista;
+return list;
 
 
 
@@ -57,9 +55,6 @@ return lista;
 
 List<int> quickSort(List<int> list){
 
-
-  List<int> listadatos = [6 ,3,8,9,1];
-
-  listadatos.sort((int a, int b) => a.compareTo(b));
-  return listadatos;
+  list.sort((int a, int b) => a.compareTo(b));
+  return list;
 }
