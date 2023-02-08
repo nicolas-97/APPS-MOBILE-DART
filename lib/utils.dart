@@ -1,6 +1,6 @@
 
 List<int> fibonacci(int maxNumber){
-   int var1 = 1;
+   int var1 = 0;
   int var2 = 1;
   int fibo = 0;
   List<int>  fibonacci=[];
