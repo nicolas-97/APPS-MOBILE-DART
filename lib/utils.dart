@@ -4,7 +4,7 @@ List<int> fibonacci(int maxNumber){
   int var2 = 1;
   int count = 0;
   int fibo = 0;
-  var fibonacci=[];
+  List<int>  fibonacci=[];
   while (count <= 25) {
     fibonacci.add(var1);
     fibo = var1 + var2;
@@ -15,9 +15,6 @@ List<int> fibonacci(int maxNumber){
   }
 return fibonacci;
 }
-
-
-
 
 
 
@@ -59,7 +56,7 @@ return lista;
 }
 
 List<int> quickSort(List<int> list){
-    Map<String, int> vectores = {'a': 1, 'b': 2};
+
 
   List<int> listadatos = [-9999999999,-12,-000000000,-1,-2,99,678,88,10,15,14,];
 
