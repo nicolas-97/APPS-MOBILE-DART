@@ -1,5 +1,5 @@
 import 'package:diacritic/diacritic.dart';
-import 'dart:html';
+
 
 List<int> fibonacci(int maxNumber){
   var firstList = [1,1];
